@@ -18,7 +18,7 @@ class TodoTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(str(response.context['user']), 'test')
 
-        # Todo Test
+        # Test
         self.client.post('/todo/new/', {'title': "test_title", 'text': "test_text"})
         self.assertIsInstance(Todo.objects.last(), Todo)
 

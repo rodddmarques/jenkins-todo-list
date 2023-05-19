@@ -25,7 +25,7 @@ class TodoList(ListView):
 
 
 
-def completed(request, pk):
+def completed(pk):
     todo = get_object_or_404(Todo, pk=pk)
     todo.completed = True
     todo.completed_at = datetime.now()
